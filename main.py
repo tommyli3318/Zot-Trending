@@ -1,6 +1,7 @@
 from flask import Flask, render_template
 import json
 import reddit
+import youtube
 
 
 app = Flask(__name__)
@@ -18,10 +19,12 @@ def index():
     #twitter
 
     #youtube
+    titles, descs, links = youtube.results()
 
 
     
-    return render_template('index.html',redditPosts = reddit_posts, name = subreddit_name)
+    return render_template('index.html',redditPosts = reddit_posts, name = subreddit_name,
+                            yt_titles=titles, yt_descs=descs, yt_links=links)
 
 if __name__ == "__main__":
     
