@@ -9,32 +9,21 @@ json_text = response.read().decode(encoding='utf-8')
 
 refined_list = json.loads(json_text)
 
-print(type(refined_list['items']))
-print(len(refined_list['items']))
-
-print()
-
-
-
-
 def get_results(refined_list:[dict]) -> (list,list,list):
-    titles = []
-    descriptions = []
-    links = []
-
-    
-
-    for i in refined_list['items']:
-        titles.append(i['snippet']['title'])
-        descriptions.append(i['snippet']['description'])
-        links.append(i['id']['videoId'])
-    return titles, descriptions, links
+   titles = []
+   descriptions = []
+   links = []
 
 
-titles, descriptions, links = get_results(refined_list)
 
-print(titles)
-print(descriptions)
-print(links)
+   for i in refined_list['items']:
+       titles.append(i['snippet']['title'])
+       descriptions.append(i['snippet']['description'])
+       links.append('https://www.youtube.com/watch?v=' + i['id'])
 
+   return titles, descriptions, links
 
+#titles, desc, links = get_results(refined_list)
+
+def results():
+	return get_results(refined_lists)
