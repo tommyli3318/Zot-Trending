@@ -1,31 +1,40 @@
-import json
-import praw
-import urllib.parse
 import urllib.request
+import json
 
-api_key = 'AIzaSyAPsz82Vg-RYZ8EQD8QB1Y-45N_IEJDz5o'
-base_url = 'https://www.googleapis.com/youtube/v3'
+GOOGLE_API_KEY = 'AIzaSyDhoNZBc8w_g1GamIK-i0WBZJA6Gr-eDGQ'
+URL = 'https://www.googleapis.com/youtube/v3/videos?part=snippet&maxResults=4&chart=mostPopular&regionCode=US&key=' + GOOGLE_API_KEY
 
-def buildURL(search, maxResults):
-	query_parameters = [('key', api_key), ('q', search), ('part', 'snippet'), ('type', 'videos'), ('maxResults', str(maxResults))]
-	return base_url + '/search?' + urllib.parse.urlencode(query_parameters)
+response = urllib.request.urlopen(URL)
+json_text = response.read().decode(encoding='utf-8')
 
-def getResult(url):
-	response = None
-	try:
-		response = urllib.request.urlopen(url)
-		return json.load(response)
-	finally:
-		if response != None:
-			response.close()
+refined_list = json.loads(json_text)
 
-def printResults(results):
-	for item in results['items']:
-		print(item['snippet']['title'], item['snippet']['description'])
+print(type(refined_list['items']))
+print(len(refined_list['items']))
+
+print()
 
 
-if __name__ == '__main__':
-	search = input("What do you want to search for? ")
-	query_string = buildURL(search, 10)
-	result = getResult(query_string)
-	printResults(result)
+
+
+def get_results(refined_list:[dict]) -> (list,list,list):
+    titles = []
+    descriptions = []
+    links = []
+
+    
+
+    for i in refined_list['items']:
+        titles.append(i['snippet']['title'])
+        descriptions.append(i['snippet']['description'])
+        links.append(i['id']['videoId'])
+    return titles, descriptions, links
+
+
+titles, descriptions, links = get_results(refined_list)
+
+print(titles)
+print(descriptions)
+print(links)
+
+
