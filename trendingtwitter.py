@@ -22,4 +22,4 @@ if __name__ == '__main__':
     '''Experiment with your reddit function here. Examine the output on the console.'''
 
     t_api = create_twitter_instance()
-    print(five_trending(t_api))
+    print(four_trending(t_api))
