@@ -23,9 +23,9 @@
                         <a target="_blank" href="https://www.reddit.com{{redditPosts[0].permalink}}" class="card-link">LINK</a>
                         <a href="#" class="card-link">Another link</a>
                     </div>
-                </div>            
+                </div>
             </div>
-                
+
             <div class="col-3">
                 <div class="card w-100" style="width: 18rem; max-height: 500px; text-overflow: ellipsis; overflow: hidden;">
                     <div class="card-body">
@@ -36,9 +36,9 @@
                         <a href="#" class="card-link">Card link</a>
                         <a href="#" class="card-link">Another link</a>
                     </div>
-                </div>            
+                </div>
             </div>
-            
+
             <div class="col-3">
                 <div class="card w-100" style="width: 18rem;">
                     <div class="card-body">
@@ -49,9 +49,9 @@
                         <a href="#" class="card-link">Card link</a>
                         <a href="#" class="card-link">Another link</a>
                     </div>
-                </div>            
+                </div>
             </div>
-                    
+
             <div class="col-3">
                 <div class="card w-100" style="width: 18rem;">
                     <div class="card-body">
@@ -62,12 +62,68 @@
                         <a href="#" class="card-link">Card link</a>
                         <a href="#" class="card-link">Another link</a>
                     </div>
-                </div>            
-            </div>    
-                
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="row">
+            <div class="col-3">
+                <div class="card w-100" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ redditPosts[0].title }}</h5>
+                        <p class="card-subtitle mb-2 text-muted">{{ redditPosts[0].author }}</h6>
+                        <p class="card-text">{{ redditPosts[0].selftext[:300] + ' ...' }}</p>
+                        <p><small>{{redditPosts[0].comments[0].body}}</small></p>
+                        <a target="_blank" href="https://www.reddit.com{{redditPosts[0].permalink}}" class="card-link">LINK</a>
+                        <a href="#" class="card-link">Another link</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-3">
+                <div class="card w-100" style="width: 18rem; max-height: 500px; text-overflow: ellipsis; overflow: hidden;">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ redditPosts[1].title }}</h5>
+                        <p class="card-subtitle mb-2 text-muted">{{ redditPosts[1].author }}</h6>
+                        <p class="card-text">{{ redditPosts[1].selftext[:300] + ' ...' }}</p>
+                        <p><small>{{redditPosts[1].comments[0].body}}</small></p>
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-3">
+                <div class="card w-100" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ redditPosts[2].title }}</h5>
+                        <p class="card-subtitle mb-2 text-muted">{{ redditPosts[2].author }}</h6>
+                        <p class="card-text">{{ redditPosts[2].selftext[:300] + ' ...' }}</p>
+                        <p><small>{{redditPosts[2].comments[0].body}}</small></p>
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-3">
+                <div class="card w-100" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ redditPosts[3].title }}</h5>
+                        <p class="card-subtitle mb-2 text-muted">{{ redditPosts[3].author }}</h6>
+                        <p class="card-text">{{ redditPosts[3].selftext[:300] + ' ...' }}</p>
+                        <p><small>{{ redditPosts[3].comments[0].body}}</small></p>
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>>
-    
+
 
 
 
