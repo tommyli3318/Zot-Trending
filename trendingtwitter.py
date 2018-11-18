@@ -15,7 +15,7 @@ def create_twitter_instance():
     return api
 
 
-def five_trending(api):
+def four_trending(api):
     return api.GetTrendsCurrent()[:4]
 
 if __name__ == '__main__':
