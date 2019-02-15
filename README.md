@@ -4,11 +4,16 @@ displays a webpage for trending posts on different social media platforms. Users
 
 ## Front-end
 -HTML
+
 -CSS
+
 -Bootstrap
 
 ## Back-end
 -Python
+
 -Flask
+
 -python-twitter
+
 -praw
